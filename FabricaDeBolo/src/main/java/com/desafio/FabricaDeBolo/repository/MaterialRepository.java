@@ -5,13 +5,14 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.desafio.FabricaDeBolo.model.Materiais;
+import com.desafio.FabricaDeBolo.model.Material;
 
 @Repository
-public interface MaterialRepository extends JpaRepository<Materiais, Long> {
-
-	public List<Materiais> findAllByIdMaterialContaining(Long idMaterial);
+public interface MaterialRepository extends JpaRepository<Material, Long> {
 	
-	public List<Materiais> findAllByNomeContainingIgnoreCase(String nome);
+	public List<Material> findAllByNameContainingIgnoreCase(String name);
+	
+	public List<Material> findAllByUserContainingIgnoreCase(String user);
+	
 	
 }
