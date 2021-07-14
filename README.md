@@ -2,7 +2,7 @@
 ![Java Badge](https://img.shields.io/badge/-Java-orange?style=flat-square&logo=Java&logoColor=white&link=#)
 ![Java Badge](https://img.shields.io/badge/-SpringBoot-orange?style=flat-square&logo=SpringBoot&logoColor=white&link=#)
 
-Realizar a gestão de matérias primas para fabricação de Bolos
+Realizar a gestão de matérias primas para fabricação de Bolos 🍰
 
 ⚡ Tecnologias usadas:
 
@@ -21,19 +21,37 @@ Para executar o projeto, será necessário instalar os seguintes programas:
 
 ## Desenvolvimento
 
-Para iniciar o desenvolvimento, é necessário clonar o projeto do GitHub num diretório de sua preferência:
+Para iniciar o desenvolvimento, é necessário dar um fork e clonar o projeto do GitHub num diretório de sua preferência:
 
 ```git
 cd "diretorio de sua preferencia"
 git clone https://github.com/Micalli/desafio_springboot.git
 ```
 
-### Construção
+## Rotas
 
-Para construir o projeto com o Maven, executar os comando abaixo:
-
+GET: http://localhost:8080/rawMaterials?user=Fulano <br>
+     http://localhost:8080/rawMaterials?name=Farinha <br>
+POST: http://localhost:8080/rawMaterials/ <br>
+O JSON tem que ficar dessa forma
 ```
-mvn clean install
+{
+    "name":"Farinha de rosca",
+    "quantity":"20",
+    "user":"Bruno"
+}
 ```
+PUT: http://localhost:8080/rawMaterials/{idMaterial}/request<br>
+O JSON tem que ficar dessa forma
+```
+{
+    "quantity":"18",
+    "user":"Brunow Micalli"
+}
+```
+Feito por [Bruno Micalli](https://github.com/micalli).
 
-O comando irá baixar todas as dependências do projeto e criar um diretório *target* com os artefatos construídos, que incluem o arquivo jar do projeto.
+
+[![Linkedin Badge](https://img.shields.io/badge/-Bruno_Micalli-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/brunomicalli/)](https://www.linkedin.com/in/brunomicalli/)
+
+
